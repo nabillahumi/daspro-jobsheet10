@@ -22,8 +22,8 @@ public class LatihanArray2 {
             for (int j = 0; j < jmlPernyataan; j++) {
                 total += survey[i][j];
             }
-            double rata2 = total / survey[i].length;
-            System.out.printf("Rata-rata responden %d: %.2f%n ", i + 1, rata2);
+            double rata2 = total / (jmlPernyataan);
+            System.out.println("Rata-rata responden ke "+ (i + 1) + " : " + rata2);
         }
 
         for (int j = 0; j < jmlPernyataan; j++) {
@@ -31,17 +31,17 @@ public class LatihanArray2 {
             for (int i = 0; i < jmlhResponden; i++) {
                 total += survey[i][j];
             }
-            double rata2 = total / survey.length;
-            System.out.printf("Rata-rata pertanyaan %d: %.2f%n", j + 1, rata2);
+            double rata2 = total / (jmlhResponden);
+            System.out.println("Rata-rata pernyataan ke "+  (j + 1) + " : " +  rata2);
         } 
 
-        double totalKeseluruhan = 0;
-        for (int i = 0; i < survey.length; i++) {
-            for (int j = 0; j < survey[i].length; j++) {
+        int totalKeseluruhan = 0;
+        for (int i = 0; i < jmlhResponden; i++) {
+            for (int j = 0; j < jmlPernyataan; j++) {
                 totalKeseluruhan += survey[i][j];
             }
         }
         double rata2Keseluruhan = totalKeseluruhan / (jmlhResponden * jmlPernyataan);
-        System.out.printf("Rata-rata keseluruhan : %.2f%n ", rata2Keseluruhan);
+        System.out.println("Rata-rata Keseluruhan : " + rata2Keseluruhan);
     }
 }
