@@ -54,7 +54,7 @@ public class BiskopWithScanner18 {
                         if (penonton[i][j] != null) {
                             System.out.printf("Baris %d, kolom %d: %s\n", i + 1, j + 1, penonton[i][j]);
                     } else {
-                        System.out.printf("Baris %d, Kolom %d: Kosong\n", i + 1, j +1);
+                        System.out.printf("Baris %d, Kolom %d: ***\n", i + 1, j +1);
                     }
                     }
               
