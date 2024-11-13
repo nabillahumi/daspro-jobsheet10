@@ -33,7 +33,13 @@ public class BiskopWithScanner18 {
                     sc.nextLine(); 
 
                     if (baris >= 1 && baris <= 4 && kolom >= 1 && kolom <= 2) {
-                        break;
+                        if (penonton[baris - 1][kolom - 1] == null) {
+                            //Kursi kosong, masukkan nama penonton
+                            penonton[baris - 1][kolom - 1] = nama;
+                            break;
+                        } else {
+                            System.out.println("Kursi telah terisi oleh " + penonton[baris - 1][kolom - 1] + ". Silahkan pilih kursi lain.");
+                        }
                     } else {
                         System.out.println("NOmor baris atau kolom tidak tersedia. Silahkan input kembali.");
                     }
